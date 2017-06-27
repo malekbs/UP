@@ -89,7 +89,7 @@ svmsm <- R6Class("svmsm",
 			},
 			predict=function(newdata) 
 			{
-				return(list(mean= predict.svm(self$model,newdata)))
+				return(list(mean= predict(self$model,newdata)))
 			},
 			submodelspredictions= function(){
 
