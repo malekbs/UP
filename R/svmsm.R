@@ -20,20 +20,19 @@
 #'
 #' @examples
 #' library(UP)
-#' d      <- 2
+#' d      	<- 2
 #' X    	<- expand.grid(x1=s <- seq(0,1, length=5), x2=s)
 #' Xtest	<- expand.grid(x1=seq(0,1,length=5), x2=seq(0,1,length=4))
-#' Y      <- apply(X, 1, branin)
-#' sm     <- svmsm$new()
+#' Y      	<- apply(X, 1, branin)
+#' sm     	<- svmsm$new()
 #' sm$setDOE(X,Y)
 #' sm$train() 
-#' predictions <- sm$predict(Xtest)
+#' predictions 	<- sm$predict(Xtest)
 #' 
 #'    
 #' @export
 #' @format An \code{\link{R6Class}} generator object
 #' @import e1071
-
 svmsm <- R6Class("svmsm", 
 			inherit 	= sm,
 			public 	= list(
@@ -42,10 +41,10 @@ svmsm <- R6Class("svmsm",
 			initialize = function(x = NULL, y = NULL, parameters = NULL) 
 			{
 				self$model  		= NULL
-				self$parameters	= parameters
+				self$parameters		= parameters
 
-				self$x				  = x
-				self$y 				  = y
+				self$x			= x
+				self$y 			= y
 				self$fitness		= 1e10
 			},
 			train = function() 
@@ -53,7 +52,7 @@ svmsm <- R6Class("svmsm",
 				if(!self$readytopredict) 
 				{
 					super$train()
-					formula     = ~1 
+					formula     	= ~1 
 					if(!is.null(self$parameters$formula))
 						formula = self$parameters$formula
 
@@ -81,7 +80,7 @@ svmsm <- R6Class("svmsm",
 					if(!is.null(self$parameters$shrinking))
 						shrinking = self$parameters$shrinking
           
-					self$model	= e1071::predict.svm(self$x, self$y, gamma = gamma, 
+					self$model	= e1071::predict(self$x, self$y, gamma = gamma, 
 										epsilon = epsilon, degree = degree,
 										tolerance = tolerance, cost = cost, 
 										shrinking = shrinking)
