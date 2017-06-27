@@ -25,14 +25,13 @@
 #' @examples
 #' library(UP)
 #' d            <- 2;
-#' n            <- 16
 #' X    	      <- expand.grid(x1=s <- seq(0,1, length=5), x2=s)
-#' Xtest	      <- expand.grid(x1=seq(0,1,length=5), x2=seq(0,1,length=4))
+#' Xtest	      <- expand.grid(x1=seq(0,1,length=10), x2=seq(0,1,length=10))
 #' Y            <- apply(X, 1, branin)
-#' sm= krigingsm$new()
+#' sm = krigingsm$new()
 #' sm$setDOE(X,Y)
 #' sm$train() 
-#' sm$predict(Xtest)
+#' predictions <- sm$predict(Xtest)
 #' 
 #'
 #'    
