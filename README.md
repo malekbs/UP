@@ -21,21 +21,15 @@ Usage
 -----
 
 ```
-d           <- 2;
-n           <- 16
-testdata    <- expand.grid(x1=s <- seq(0,1, length=5), x2=s)
-design.fact <- expand.grid(x1=seq(0,1,length=5), x2=seq(0,1,length=4))
-y           <- apply(design.fact, 1, branin)
-aUP         <- UPClass$new(design.fact,y,Scale =TRUE, resampling_type = "KFCV", kfold =5)
-kriging     <- krigingsm$new()
-upkrig      <- UPSM$new(sm= kriging, UP =aUP)
-predicted.values.model1 <- upkrig$uppredict(testdata)
-max(predicted.values.model1$upsd)
-upkrig2     <- UPSM$new(sm= krigingsm$new(), UP=UPClass$new(design.fact,y,Scale =TRUE))
-uppred2     <- upkrig2$uppredict(testdata)
-max(uppred2$upsd)
-upsvm       <- UPSM$new(sm= svmsm$new(), UP=UPClass$new(design.fact,y,Scale =TRUE))
-uppred3     <- upsvm$uppredict(testdata)
+library(UP)
+x           <- as.matrix(c(-2.6,-0.2, 1.7,-1.4,1.2,3))
+y           <- c(0.8, 0.5, 0.1, 0.3, 0, 0.4)
+xverif      <- seq(-3, 3, length.out =300)
+krig        <- krigingsm$new()
+resampling  <- UPClass$new(x, y, Scale =TRUE) 
+upsm        <- UPSM$new(sm= krig, UP= resampling) 
+prediction  <- upsm$uppredict(xverif)
+plotUP1D(xverif, prediction, x, y)
 ```
 
 
