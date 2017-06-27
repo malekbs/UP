@@ -72,7 +72,7 @@ uppredict: surrogate model UP predictions
 
 \code{train} - train surrogate models
 
-\code{predict.UP} - prediction values of the  surrogate models
+\code{predict} - prediction values of the  surrogate models
 
 \code{upsm} - create a UP surrogate model
 
