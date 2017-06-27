@@ -5,7 +5,7 @@
 \alias{masterprediction}
 \alias{predict}
 \alias{setDOE}
-\alias{svm}
+\alias{svr}
 \alias{train}
 \alias{uppredict}
 \alias{upsm}
@@ -13,7 +13,7 @@
 \usage{
 kriging(x = NULL, y = NULL, parameters = NULL, type = "UK")
 
-svm(x = NULL, y = NULL, parameters = NULL)
+svr(x = NULL, y = NULL, parameters = NULL)
 
 train(model)
 
@@ -47,7 +47,7 @@ uppredict(model, newdata)
 \value{
 kriging: kriging surrogate model.
 
-svm: svm surrogate model
+svr: svr surrogate model
 
 train: trained surrogate model
 
@@ -64,7 +64,7 @@ uppredict: surrogate model UP predictions
 \description{
 \code{kriging} - kriging surrogate model
 
-\code{svm} - SVM surrogate models
+\code{svr} - suport vector machine regression surrogate models
 
 \code{train} - train surrogate models
 
