@@ -21,15 +21,13 @@
 #' @examples
 #' library(UP)
 #' d      <- 2
-#' n      <- 16
 #' X    	<- expand.grid(x1=s <- seq(0,1, length=5), x2=s)
 #' Xtest	<- expand.grid(x1=seq(0,1,length=5), x2=seq(0,1,length=4))
 #' Y      <- apply(X, 1, branin)
 #' sm     <- svmsm$new()
-#' 
 #' sm$setDOE(X,Y)
 #' sm$train() 
-#' sm$predict(Xtest)
+#' predictions <- sm$predict(Xtest)
 #' 
 #'    
 #' @export
@@ -83,7 +81,7 @@ svmsm <- R6Class("svmsm",
 					if(!is.null(self$parameters$shrinking))
 						shrinking = self$parameters$shrinking
           
-					self$model	= svm(self$x, self$y, gamma = gamma, 
+					self$model	= e1071::svm(self$x, self$y, gamma = gamma, 
 										epsilon = epsilon, degree = degree,
 										tolerance = tolerance, cost = cost, 
 										shrinking = shrinking)
