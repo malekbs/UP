@@ -1,6 +1,6 @@
 # UP : Universal Predicition Package
 
-a package that provides universal method for surrogate models: A package with extensible options and various 
+UP is a package that provides universal method for surrogate models: A package with extensible options and various 
 UP-based algorithms for optimization, refienment and inversion.
 
 
