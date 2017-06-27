@@ -80,7 +80,7 @@ svmsm <- R6Class("svmsm",
 					if(!is.null(self$parameters$shrinking))
 						shrinking = self$parameters$shrinking
           
-					self$model	= e1071::predict(self$x, self$y, gamma = gamma, 
+					self$model	= e1071::svm(self$x, self$y, gamma = gamma, 
 										epsilon = epsilon, degree = degree,
 										tolerance = tolerance, cost = cost, 
 										shrinking = shrinking)
