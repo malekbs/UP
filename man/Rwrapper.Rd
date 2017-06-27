@@ -38,7 +38,7 @@ uppredict(model, newdata)
 
 \item{model}{the surrogate model}
 
-\item{newdata}{data points where to predict}
+\item{newdata}{data points where to predict.UP}
 
 \item{sm}{surrogate model}
 
