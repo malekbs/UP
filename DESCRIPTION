@@ -1,0 +1,13 @@
+Package: UP
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2017-02-16
+Author: Malek Ben Salem
+Maintainer: Malek Ben Salem <malek.ben-salem@emse.fr>
+Description: stimation, validation and prediction of an aggregation of kriging
+    models. Important functions.
+Depends: R6, DiceKriging, foreach, doSNOW 
+Imports: pracma, rgenoud, e1071, lhs
+License: GPL-2 | GPL-3
+RoxygenNote: 5.0.1
