@@ -43,14 +43,14 @@ train <- function(model)
 
 #' Traditional R calls
 #' 
-#' \code{predict} - prediction values of the  surrogate models
+#' \code{predict.UP} - prediction values of the  surrogate models
 #' 
 #' @param newdata data points where to predict
 #' 
-#' @return predict: surrogate model predictions
+#' @return predict.UP: surrogate model predictions
 #' @rdname Rwrapper
 #' @export 
-predict <- function(model, newdata) 
+predict.UP <- function(model, newdata) 
 {
   return(model$predict(newdata))
 }
