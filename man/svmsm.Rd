@@ -26,7 +26,7 @@ The inheritance of the class \code{sm} is required when one want to use the univ
 \describe{
   \item{\code{svmsm$new(x=NULL,y=NULL,parameters = NULL )}}{Creates a new \code{svmsm} object. }
   \item{\code{train()}}{train the surrogate model.}
- \item{\code{predict(newdata)}}{ it predicts the new data.}
+ \item{\code{predict(newdata)}}{it predicts the new data.}
 }
 }
 \examples{
