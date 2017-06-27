@@ -3,7 +3,7 @@
 \name{kriging}
 \alias{kriging}
 \alias{masterprediction}
-\alias{predict}
+\alias{predict.UP}
 \alias{setDOE}
 \alias{svr}
 \alias{train}
@@ -17,7 +17,7 @@ svr(x = NULL, y = NULL, parameters = NULL)
 
 train(model)
 
-predict(model, newdata)
+predict.UP(model, newdata)
 
 upsm(sm = NULL, UP = NULL)
 
@@ -51,7 +51,7 @@ svr: svr surrogate model
 
 train: trained surrogate model
 
-predict: surrogate model predictions
+predict.UP: surrogate model predictions
 
 upsm: UP surrogate model
 
@@ -68,7 +68,7 @@ uppredict: surrogate model UP predictions
 
 \code{train} - train surrogate models
 
-\code{predict} - prediction values of the  surrogate models
+\code{predict.UP} - prediction values of the  surrogate models
 
 \code{upsm} - create a UP surrogate model
 
