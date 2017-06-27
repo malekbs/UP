@@ -16,12 +16,12 @@ kriging <- function( x = NULL,y = NULL,parameters = NULL, type= "UK")
 
 #' Traditional R calls
 #' 
-#' \code{svm} - SVM surrogate models
+#' \code{svr} - suport vector machine regression surrogate models
 #' 
-#' @return svm: svm surrogate model
+#' @return svr: svr surrogate model
 #' @rdname Rwrapper
 #' @export 
-svm <- function(x = NULL, y = NULL, parameters = NULL) 
+svr <- function(x = NULL, y = NULL, parameters = NULL) 
 {
   return(svmsm$new(x=x,y=y,parameters=parameters))
 }
