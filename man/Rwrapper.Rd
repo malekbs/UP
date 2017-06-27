@@ -17,7 +17,7 @@ svr(x = NULL, y = NULL, parameters = NULL)
 
 train(model)
 
-predict.UP(model, newdata)
+predict.UP(object, newdata, ...)
 
 upsm(sm = NULL, UP = NULL)
 
@@ -38,7 +38,11 @@ uppredict(model, newdata)
 
 \item{model}{the surrogate model}
 
+\item{object}{surrogate model}
+
 \item{newdata}{data points where to predict.UP}
+
+\item{...}{other parameters}
 
 \item{sm}{surrogate model}
 
