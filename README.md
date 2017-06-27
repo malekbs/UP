@@ -1,4 +1,4 @@
-# R Package UP : Universal Predicition distirbution
+# R Package UP : Universal Predicition distirbution for surrogate models
 UP is a package that provides universal method for surrogate models: A package with extensible options and various 
 UP-based algorithms for optimization, refienment and inversion.
 
