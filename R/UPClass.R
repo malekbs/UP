@@ -126,7 +126,7 @@ UPClass <- R6Class("UPClass",
 													resampling_type = self$resampling_type,  ListIndices = self$ListIndices, 
 													kfold = self$kfold, division_method = self$division_method) 
 
-					distmt 						<- dist(Xscaled)
+					distmt 						<- dist(self$Xscaled)
 					distmtx 					<- as.matrix(distmt) + 10*diag(self$d,self$n)
 					minimumdistances  			<- apply(distmtx,1,min)
 					self$rho					<- max(minimumdistances) 
