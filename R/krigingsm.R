@@ -82,7 +82,11 @@ krigingsm <- R6Class("krigingsm",
             					nugget 			  = NULL 
             					if(estim.method !="LOO")
             						nugget 		  = 1e-10
-            
+                                                            
+                                                            if(!is.null(self$paramters$nugget)) 
+                                                                      nugget       =   self$paramters$nugget
+                                                            
+                                                            
             					nugget.estim 	= FALSE
             					noise.var 		= NULL
             
