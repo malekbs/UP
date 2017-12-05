@@ -62,29 +62,29 @@ krigingsm <- R6Class("krigingsm",
             					self$n= nrow(self$x)
             
             					formula=~1 
-            					if(!is.null(self$paramters$formula))  formula = self$paramters$formula
+            					if(!is.null(self$parameters$formula))  formula = self$parameters$formula
             
             					covtype 		  ="matern5_2"
-            					if(!is.null(self$paramters$covtype))  covtype = self$paramters$covtype
+            					if(!is.null(self$parameters$covtype))  covtype = self$parameters$covtype
             
             					coef.trend 		= NULL
-            					if(!is.null(self$paramters$coef.trend))  coef.trend = self$paramters$coef.trend
+            					if(!is.null(self$parameters$coef.trend))  coef.trend = self$parameters$coef.trend
             
             					coef.cov 		  = NULL 
-            					if(!is.null(self$paramters$coef.cov))  coef.cov = self$paramters$coef.cov
+            					if(!is.null(self$parameters$coef.cov))  coef.cov = self$parameters$coef.cov
             
             					coef.var 		  = NULL
-            					if(!is.null(self$paramters$coef.var))  coef.var = self$paramters$coef.var
+            					if(!is.null(self$parameters$coef.var))  coef.var = self$parameters$coef.var
             
             					estim.method 	= "MLE"
-            					if(!is.null(self$paramters$estim.method))  estim.method = self$paramters$estim.method
+            					if(!is.null(self$parameters$estim.method))  estim.method = self$parameters$estim.method
             
             					nugget 			  = NULL 
             					if(estim.method !="LOO")
             						nugget 		  = 1e-10
                                                             
-                                                            if(!is.null(self$paramters$nugget)) 
-                                                                      nugget       =   self$paramters$nugget
+                                                            if(!is.null(self$parameters$nugget)) 
+                                                                      nugget       =   self$parameters$nugget
                                                             
                                                             
             					nugget.estim 	= FALSE
@@ -94,9 +94,9 @@ krigingsm <- R6Class("krigingsm",
             					optim.method 	= "BFGS"
             
             					lower 			  = sqrt(self$d)*rep(0.05,self$d)
-            					if(!is.null(self$paramters$lower)) lower= self$paramters$lower
+            					if(!is.null(self$parameters$lower)) lower= self$parameters$lower
             					upper 			  = sqrt(self$d)*rep(5, self$d)
-            					if(!is.null(self$paramters$upper)) upper= self$paramters$upper
+            					if(!is.null(self$parameters$upper)) upper= self$parameters$upper
             
             					parinit 		  = NULL
             					multistart 		= 1
