@@ -36,6 +36,6 @@ References
 ---------
 
 
-BEN SALEM, M., ROUSTANT, O., GAMBOA, F. and TOMASO, L. (2015). Universal Prediction distribution for surrogate models. SIAM/ASA Journal on Uncertainty Quantification, 5(1):1086–1109, 2017.
+BEN SALEM, M., ROUSTANT, O., GAMBOA, F. and TOMASO, L. (2017). Universal Prediction distribution for surrogate models. SIAM/ASA Journal on Uncertainty Quantification, 5(1), pp.1086–1109.
 
 ROUSTANT, O., GINSBOURGER, D. and DEVILLE, Y., 2012. DiceKriging, DiceOptim: Two R Packages for the Analysis of Computer Experiments by Kriging-Based Metamodeling and Optimization. Journal of statistical software, 51(1), pp.1-55.
