@@ -16,7 +16,22 @@ opt_target <-function(model,target =target, lower, upper,
   parinit 		<- NULL
   domaine 		<- cbind(lower, upper)
   iRefCrit 		<- 0
-
+  if (is.null(RefControl$alpha)) 
+    {
+      if( class(model)[1]=="krigingsm")  
+      {
+        alpha   <- 0.0
+      }
+      else
+      {
+        alpha   <- 0.1
+      }
+    }
+    else
+    {
+      alpha     <- RefControl$alpha 
+    }
+  
   o <- genoud(inverse_crit, nvars=d, max=TRUE, pop.size=control$pop.size, 
               max.generations=control$max.generations, wait.generations=control$wait.generations,
               hard.generation.limit=TRUE, starting.values=parinit, MemoryMatrix=TRUE, 
@@ -27,7 +42,7 @@ opt_target <-function(model,target =target, lower, upper,
               instance.number=0, output.path="stdout", output.append=FALSE, project.path=NULL, P1=50,
               P2=50, P3=50, P4=50, P5=50, P6=50, P7=50, P8=50,P9=0, P9mix=NULL,BFGSburnin=control$BFGSburnin,
               BFGSfn=NULL, BFGShelp=NULL,control=list("maxit"=control$BFGSmaxit),
-              cluster=FALSE, balance=FALSE, debug=FALSE, model=model, target = target)
+              cluster=FALSE, balance=FALSE, debug=FALSE, model=model, target = target,alpha=alpha)
 
   o$par 					<- t(as.matrix(o$par))
   colnames(o$par) 		<- colnames(as.matrix(model$get_DOE()$x))
