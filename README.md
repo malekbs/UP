@@ -1,6 +1,6 @@
 # R Package UP : Universal Prediction distribution for surrogate models
 UP is a package that provides a prediction distribution method for all surrogate models: A package with extensible options and various 
-UP-based algorithms for optimization, refienment and inversion.
+UP-based algorithms for optimization, refinement and inversion.
 
 
 Installation
